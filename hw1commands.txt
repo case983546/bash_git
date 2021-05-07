@@ -1,0 +1,23 @@
+pwd
+cd 	cd ~  cd .. cd ../..
+ls -la -R
+mkdir -p -v
+rmdir
+cp
+mv
+touch
+find
+less
+head
+tail
+grep
+cat
+date
+>
+./script
+curl   >file
+--help
+vim   insert esc :q :w :q!
+bash --version
+help
+echo

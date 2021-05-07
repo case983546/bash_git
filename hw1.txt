@@ -1,0 +1,111 @@
+HW`#1  Linux bash 
+
+1) Посмотреть где я
+pwd  
+
+2) Создать папку
+mkdir –p bash_test 
+ 
+3) Зайти в папку
+cd bash_test
+  
+4) Создать 3 папки
+mkdir –p bash_t1 bash_t2 bash_t3
+
+5) Зайти в любоую папку
+cd bash_t1
+
+6) Создать 5 файлов (3 txt, 2 json)
+touch file1.txt file2.txt file3.txt file4.json file5.json 
+
+7) Создать 3 папки
+mkdir bash_t11 bash_t12 bash_t13
+
+8) Вывести список содержимого папки
+ls –la 
+
+9) Открыть любой txt файл
+vim file1.txt 	
+
+10) + написать туда что-нибудь, любой текст.
+Press INSERT key to turn on text editing  and type text
+ 
+11) + сохранить и выйти.
+Press ESC key and input 	:wq 	
+
+12) Выйти из папки на уровень выше
+cd ..
+
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+mv -v *.txt   bash_t13  	
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+cp –v file4.json  file5.json b03_folder
+
+15) Найти файл по имени
+find –name “fle*.json”  search files and directories with specified parameters
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+find . | grep -e 'txt'
+
+17) вывести несколько первых строк из текстового файла
+Head -n file.txt
+
+18) вывести несколько последних строк из текстового файла
+Tail -n file.txt
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+less file.txt
+
+20) вывести дату и время
+date 
+
+Задание *
+
+1) Отправить http запрос на сервер:  https://api.quarantine.country/api/v1/regions            
+
+curl https://api.quarantine.country/api/v1/regions>s_response.txt
+
+s_response.txt
+ 
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+#  chmod ugo+x файл_скрипта (для Win Git Bash необязательно) делает файл исполняемым
+ ./hw.sh>hw.log
+
+hw.sh
+
+# !/bin/bash
+echo "hw_#1 bash"	
+pwd
+#0
+echo "Создаем тестовую папку bash_test"
+mkdir -p -v  bash_test
+#3 
+echo "3. Зайти в папку  "
+cd bash_test
+pwd
+#4
+echo "4. Создать 3 папки"
+mkdir -v -p b01_folder b02_folder b03__folder
+#5
+echo "5. Зайти в любоую папку"
+cd b01_folder
+pwd
+#6
+echo "6. Создать 5 файлов (3 txt, 2 json)"
+touch file1.txt file2.txt file3.txt file4.json file5.json
+ls
+
+#7
+echo "7. Создать 3 папки"
+mkdir -v -p bash_t11 bash_t12 bash_t13
+ls 
+
+#8
+echo "8. Вывести список содержимого папки"
+ls -la
+
+#13
+echo "13. переместить любые 2 файла, которые вы создали, в любую другую папку"
+mv -v *.txt   bash_t13  
+
